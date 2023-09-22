@@ -7,7 +7,7 @@ pragma solidity ^0.8.8;
 
 /// @title VAULT
 
-contract vault is Ownable {
+contract Vault is Ownable {
   address public token; //can be allowedTokens in a future
   mapping(address => uint) public stakingBalance;
 
@@ -28,7 +28,7 @@ contract vault is Ownable {
     require(success, "Transaction was not successful");
   }
 
-  function subscribeToStrategy() {}
+  function subscribeToStrategy(address strategy) {}
 
   function depositAndSubscribe(uint amount_) public {
     bool successfulDeposit = deposit(amount_);
