@@ -3,18 +3,26 @@
 pragma solidity ^0.8.8;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./Strategy.sol"; // Assuming Strategy.sol is in the same folder
+import "./Strategy.sol";
+import "../Rules/Rules.sol";
 
 contract StrategyFactory is Ownable {
   // List of Strategy contracts deployed by this Factory
   address[] public deployedStrategies;
+  Rules rules;
 
   event StrategyDeployed(address indexed strategyAddress);
-8
-  function deployStrategy(
-    address rulesAddress
-  ) external onlyOwner returns (address) {
-    Strategy newStrategy = new Strategy(rulesAddress);
+
+  modifier onlyOwner() {
+    msg.sender = owner;
+  }
+
+  constructor(address rules) {
+    rules = new Rules(rules);
+  }
+
+  function deployStrategy() external onlyOwner returns (address) {
+    Strategy newStrategy = new Strategy(rules);
     deployedStrategies.push(address(newStrategy));
 
     emit StrategyDeployed(address(newStrategy));
@@ -24,5 +32,9 @@ contract StrategyFactory is Ownable {
 
   function listDeployedStrategies() external view returns (address[] memory) {
     return deployedStrategies;
+  }
+
+  function setRules(address rules) onlyOwner {
+    rules = Rules(rules);
   }
 }

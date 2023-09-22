@@ -24,6 +24,7 @@ contract Strategy is Ownable {
   //About Token Percentatges
   function setTokenPercentage(address token_, uint percentage_) public {
     require(percentage_ <= 100, "Percentage must be less than 100");
+    require(rules.isTokenAllowed(_token), "Token is not allowed");
     tokenPercentatges[token_] = percentage_;
   }
 
@@ -32,9 +33,6 @@ contract Strategy is Ownable {
   }
 
   //About Rules
-  function setRules(address rules) onlyProvider {
-    rules = Rules(rules);
-  }
 
   function getTokenRules() {
     Rules rules = Rules(address(0x0));

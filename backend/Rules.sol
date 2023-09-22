@@ -5,12 +5,16 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 pragma solidity ^0.8.8;
 
-/// @title Rules Contract, here we can define allowedTokens, timeouts for withdrawals,.....
+/// @title Rules Contract, here we can define allowedTokens, timeouts for withdrawals,...
 
 contract Rules is Ownable {
+  event AllowedToken(address indexed token_);
+  event RemovedToken(address indexed token_);
+
   modifier onlyOwner() {
     msg.sender = owner;
   }
+
   mapping(address => bool) public allowedTokens; //can be allowedTokens in a future
 
   constructor() {}
