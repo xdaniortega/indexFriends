@@ -1,17 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import TestimonialCard2 from '../components/testimonial-card2'
-import GalleryCard1 from '../components/gallery-card1'
-import './after-login.css'
+import TestimonialCard2 from "../components/testimonial-card2";
+import GalleryCard1 from "../components/gallery-card1";
+import "./after-login.css";
 
 const AfterLogin = (props) => {
   return (
     <div className="after-login-container">
       <Helmet>
-        <title>After-login - Character NFT template</title>
+        <title>WealthStrategists</title>
         <meta
           property="og:title"
           content="After-login - Character NFT template"
@@ -26,7 +26,9 @@ const AfterLogin = (props) => {
         ></div>
         <div data-thq="thq-navbar-btn-group" className="after-login-btn-group">
           <div className="after-login-socials"></div>
-          <button className="after-login-view button">Connected</button>
+          <button className="after-login-view button">
+            <w3m-button />
+          </button>
         </div>
         <div data-thq="thq-burger-menu" className="after-login-burger-menu">
           <button className="button after-login-button">
@@ -93,14 +95,14 @@ const AfterLogin = (props) => {
           <span>
             <span
               dangerouslySetInnerHTML={{
-                __html: ' ',
+                __html: " ",
               }}
             />
           </span>
           <span>
             <span
               dangerouslySetInnerHTML={{
-                __html: ' ',
+                __html: " ",
               }}
             />
           </span>
@@ -167,7 +169,7 @@ const AfterLogin = (props) => {
         <h1 className="after-login-text12">Let top players play for you</h1>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AfterLogin
+export default AfterLogin;
