@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
@@ -48,7 +49,9 @@ const Home = (props) => {
         </div>
         <div data-thq="thq-navbar-btn-group" className="home-btn-group">
           <div className="home-socials"></div>
-          <button className="home-view button">WalletConnect login</button>
+          <Link to="/after-login" className="home-view button">
+            WalletConnect login
+          </Link>
         </div>
         <div data-thq="thq-burger-menu" className="home-burger-menu">
           <button className="button home-button4">

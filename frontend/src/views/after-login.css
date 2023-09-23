@@ -185,16 +185,17 @@
 .after-login-pricing-card:hover {
   transform: scale(1.02);
 }
-.after-login-button1 {
+.after-login-navlink {
   align-self: center;
   transition: 0.3s;
   padding-top: var(--dl-space-space-unit);
   padding-left: var(--dl-space-space-twounits);
   padding-right: var(--dl-space-space-twounits);
   padding-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
   background-color: rgb(255, 241, 230);
 }
-.after-login-button1:hover {
+.after-login-navlink:hover {
   transform: scale(1.02);
 }
 .after-login-container3 {
@@ -281,7 +282,7 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 .after-login-text12 {
-  font-size: 40px;
+  font-size: 60px;
   align-self: center;
   text-align: center;
 }
@@ -319,6 +320,9 @@
     margin-right: 0px;
     margin-bottom: var(--dl-space-space-twounits);
   }
+  .after-login-container8 {
+    height: 771px;
+  }
   .after-login-gallery {
     grid-template-columns: 1fr 1fr;
   }
@@ -329,6 +333,7 @@
     padding-right: var(--dl-space-space-twounits);
   }
   .after-login-banner {
+    height: 1246px;
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
@@ -346,6 +351,10 @@
   .after-login-container5 {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
+  }
+  .after-login-container8 {
+    width: 732px;
+    height: 623px;
   }
   .after-login-gallery {
     padding-left: var(--dl-space-space-twounits);
@@ -365,13 +374,33 @@
     padding-right: var(--dl-space-space-unit);
     padding-bottom: var(--dl-space-space-twounits);
   }
+  .after-login-testimonial {
+    height: 855px;
+  }
   .after-login-container5 {
-    padding-top: var(--dl-space-space-twounits);
+    height: 480px;
+    margin-top: 0px;
+    padding-top: 0px;
     padding-left: var(--dl-space-space-unit);
+    margin-bottom: 0px;
     padding-right: var(--dl-space-space-unit);
-    padding-bottom: var(--dl-space-space-twounits);
+    padding-bottom: 0px;
+  }
+  .after-login-container6 {
+    height: 807px;
+  }
+  .after-login-container7 {
+    height: 828px;
+  }
+  .after-login-container8 {
+    width: 100%;
+    height: 836px;
+    align-items: flex-start;
+    padding-top: 0px;
+    flex-direction: row;
   }
   .after-login-gallery {
+    align-self: center;
     padding-top: var(--dl-space-space-twounits);
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
 
@@ -105,7 +106,9 @@ const AfterLogin = (props) => {
           </span>
         </span>
         <div className="after-login-pricing-card">
-          <button className="after-login-button1 button">Deposit</button>
+          <Link to="/balance" className="after-login-navlink button">
+            Deposit
+          </Link>
           <div className="after-login-container3">
             <span className="after-login-text09">Expected return:</span>
             <span className="after-login-text10">5%</span>
