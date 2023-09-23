@@ -53,9 +53,7 @@
   padding-bottom: var(--dl-space-space-unit);
   background-color: rgb(255, 207, 119);
 }
-.button:hover {
-  opacity: 0.5;
-}
+
 .input {
   color: var(--dl-color-gray-black);
   cursor: auto;
