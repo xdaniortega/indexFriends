@@ -2,7 +2,7 @@
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "../RebalanceRouter.sol";
+import "../interfaces/IRebalanceRouter.sol";
 
 pragma solidity ^0.8.8;
 
@@ -14,24 +14,16 @@ contract Strategy is Ownable {
   mapping(address => uint) public tokenPercentatges;
   mapping(address => uint) public userBalances;
   address NFTAlias;
-  address rebalanceRouter;
+  IRebalanceRouter rebalanceRouter;
 
   modifier onlyProvider() {
     require(msg.sender == address(0x0)); //Company address
   }
 
-  constructor(address rules_, address NFTAlias_) {
-    token = 0x0; //USDC token adress
+  constructor(address rules_, address NFTAlias_, address rebalanceRouter_) {
     rules = Rules(rules_); //Set the address of the rules contract;
     NFTAlias = NFTAlias_;
-    rebalanceRouter = RebalanceRouter(0x0); //TODO: Set address of the rebalanceRouter
-  }
-
-  //About Token Percentatges
-  function setTokenPercentage(address token_, uint percentage_) public {
-    require(percentage_ <= 100, "Percentage must be less than 100");
-    require(rules.isTokenAllowed(_token), "Token is not allowed");
-    tokenPercentatges[token_] = percentage_;
+    rebalanceRouter = IRebalanceRouter(rebalanceRouter_);
   }
 
   function getTokenPercentatges(address token_) public view returns (uint) {
@@ -62,6 +54,18 @@ contract Strategy is Ownable {
     //UpdateUsersBalance
     userBalances[user_] += amount_;
 
-    rebalanceRouter.rebalancePositions();
+    rebalanceRouter.purchase();
   }
+
+  //NFT Holder actions
+  //About Token Percentatges
+  function setTokenPercentage(address token_, uint percentage_) public {
+    require(percentage_ <= 100, "Percentage must be less than 100");
+    require(rules.isTokenAllowed(_token), "Token is not allowed");
+    tokenPercentatges[token_] = percentage_;
+
+    updateBalances();
+  }
+
+  function updateBalances() internal {}
 }
