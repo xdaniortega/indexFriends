@@ -1,3 +1,6 @@
 # strategicWealth
 
-First npm i @craco/craco --legacy-peer-deps
+First
+´npm i ´
+then
+´npm i @craco/craco --legacy-peer-deps´
