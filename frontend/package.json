@@ -4,12 +4,15 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.1.0",
+    "@web3modal/wagmi": "^3.0.0-beta.4",
     "dangerous-html": "0.1.13",
     "prop-types": "15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "viem": "^1.12.1",
+    "wagmi": "^1.4.2"
   },
   "scripts": {
     "start": "craco start",

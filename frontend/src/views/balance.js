@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import './balance.css'
+import "./balance.css";
 
 const Balance = (props) => {
   return (
     <div className="balance-container">
       <Helmet>
-        <title>Balance - Character NFT template</title>
+        <title>WealthStrategists</title>
         <meta property="og:title" content="Balance - Character NFT template" />
       </Helmet>
       <header data-thq="thq-navbar" className="balance-navbar">
@@ -20,7 +20,9 @@ const Balance = (props) => {
         ></div>
         <div data-thq="thq-navbar-btn-group" className="balance-btn-group">
           <div className="balance-socials"></div>
-          <button className="balance-view button">Connected</button>
+          <div className="balance-view button">
+            <w3m-button />
+          </div>
         </div>
         <div data-thq="thq-burger-menu" className="balance-burger-menu">
           <button className="button balance-button">
@@ -106,14 +108,14 @@ const Balance = (props) => {
               <span>
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: ' ',
+                    __html: " ",
                   }}
                 />
               </span>
               <span>
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: ' ',
+                    __html: " ",
                   }}
                 />
               </span>
@@ -134,7 +136,7 @@ const Balance = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Balance
+export default Balance;

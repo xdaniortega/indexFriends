@@ -20,7 +20,11 @@
   padding-right: var(--dl-space-space-fiveunits);
   padding-bottom: var(--dl-space-space-threeunits);
   justify-content: space-between;
-  background-image: linear-gradient(45deg, rgb(205, 218, 253) 0.00%,rgb(205, 218, 253) 100.00%);
+  background-image: linear-gradient(
+    45deg,
+    rgb(205, 218, 253) 0%,
+    rgb(205, 218, 253) 100%
+  );
 }
 .after-login-logo {
   color: #ff0000;
@@ -46,7 +50,7 @@
   justify-content: center;
 }
 .after-login-view {
-  width: var(--dl-size-size-xlarge);
+  width: 320px;
   background-color: rgb(255, 241, 230);
 }
 .after-login-burger-menu {
@@ -286,7 +290,7 @@
   align-self: center;
   text-align: center;
 }
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .after-login-desktop-menu {
     display: none;
   }
@@ -327,7 +331,7 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .after-login-navbar {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
@@ -361,7 +365,7 @@
     padding-right: var(--dl-space-space-twounits);
   }
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .after-login-navbar {
     padding: var(--dl-space-space-unit);
   }
