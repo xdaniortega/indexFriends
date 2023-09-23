@@ -2,11 +2,11 @@
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "../interfaces/IRebalanceRouter.sol";
+//import "../interfaces/IRebalanceRouter.sol";
 
 pragma solidity ^0.8.8;
 
-import "../Rules/Rules.sol";
+import "../Rules.sol";
 
 /// @title Strategy
 
@@ -23,7 +23,7 @@ contract Strategy is Ownable {
   constructor(address rules_, address NFTAlias_, address rebalanceRouter_) {
     rules = Rules(rules_); //Set the address of the rules contract;
     NFTAlias = NFTAlias_;
-    rebalanceRouter = IRebalanceRouter(rebalanceRouter_);
+    //rebalanceRouter = IRebalanceRouter(rebalanceRouter_);
   }
 
   function getTokenPercentatges(address token_) public view returns (uint) {
@@ -54,7 +54,7 @@ contract Strategy is Ownable {
     //UpdateUsersBalance
     userBalances[user_] += amount_;
 
-    rebalanceRouter.purchase();
+    //rebalanceRouter.purchase(); //TODO
   }
 
   //NFT Holder actions

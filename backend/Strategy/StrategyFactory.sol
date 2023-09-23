@@ -4,7 +4,7 @@ pragma solidity ^0.8.8;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./Strategy.sol";
-import "../Rules/Rules.sol";
+import "../Rules.sol";
 
 contract StrategyFactory is Ownable {
   // List of Strategy contracts deployed by this Factory
