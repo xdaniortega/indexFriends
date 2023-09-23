@@ -38,7 +38,11 @@ contract RebalanceRouter is IRebalanceRouter {
     router = ISwapRouter(0xE592427A0AEce92De3Edee1F18E0157C05861564); //UNISWAP ON CELO NETWORK
   }
 
-  function swapTokens(
+  function rebalancePositions() public {
+    //call swap tokens
+  }
+
+  function _swapTokens(
     address tokenIn_,
     address tokenOut_,
     uint256 amountIn_
