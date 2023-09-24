@@ -57,14 +57,16 @@ contract Rules is Ownable {
   }
 
   function _initTokens() internal {
-    IERC20 usdc = IERC20(0x07865c6e87b9f70255377e024ace6630c1eaa37f); //USDC IN ETH CELO
-    IERC20 wbtc = IERC20(0xC04B0d3107736C32e19F1c62b2aF67BE61d63a05); //WBTC IN ETH CELO
-    IERC20 weth = IERC20(0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6); //WETH IN ETH CELO
-    allowedTokens[usdc] = true;
-    allowedTokens[wbtc] = true;
+    IERC20 cusd = IERC20(0x765DE816845861e75A25fCA122bb6898B8B1282a); //cusd IN CELO
+    IERC20 weth = IERC20(0x66803FB87aBd4aaC3cbB3fAd7C3aa01f6F3FB207); //WETH IN CELO
+    IERC20 wbtc = IERC20(0xd71Ffd0940c920786eC4DbB5A12306669b5b81EF); //WBTC IN CELO
+    allowedTokens[cusd] = true;
     allowedTokens[weth] = true;
-    allowedTokensList.push(address(usdc));
-    allowedTokensList.push(address(wbtc));
+    allowedTokens[wbtc] = true;
+    allowedTokensList.push(address(cusd));
     allowedTokensList.push(address(weth));
+    allowedTokensList.push(address(wbtc));
   }
 }
+
+// 0x765DE816845861e75A25fCA122bb6898B8B1282a, 0xd71Ffd0940c920786eC4DbB5A12306669b5b81EF,1
