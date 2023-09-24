@@ -13,6 +13,7 @@
 }
 .feature-card6-text {
   align-self: center;
+  font-family: Poppins;
   margin-bottom: var(--dl-space-space-twounits);
 }
 .feature-card6-image {

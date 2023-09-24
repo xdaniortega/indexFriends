@@ -1,24 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet'
 
-import TestimonialCard2 from "../components/testimonial-card2";
-import GalleryCard1 from "../components/gallery-card1";
-import "./after-login.css";
+import BlogPostCard2 from '../components/blog-post-card2'
+import TestimonialCard2 from '../components/testimonial-card2'
+import './after-login.css'
 
 const AfterLogin = (props) => {
   return (
     <div className="after-login-container">
       <Helmet>
-        <title>WealthStrategists</title>
+        <title>After-login - Character NFT template</title>
         <meta
           property="og:title"
           content="After-login - Character NFT template"
         />
       </Helmet>
       <header data-thq="thq-navbar" className="after-login-navbar">
-        <span className="after-login-logo">WealthStrategists</span>
+        <img
+          src="https://ipfs.io/ipfs/QmZJtxZVKeGUg25J5agroDSFMM2MaKgq8gCquQ1knNTkZr"
+          alt="image"
+          className="after-login-image"
+        />
+        <span className="after-login-logo">Index Friends</span>
         <div
           data-thq="thq-navbar-nav"
           data-role="Nav"
@@ -26,10 +31,9 @@ const AfterLogin = (props) => {
         ></div>
         <div data-thq="thq-navbar-btn-group" className="after-login-btn-group">
           <div className="after-login-socials"></div>
-          <button className="after-login-view button">
+         <button className="after-login-view button">
             <w3m-button />
-          </button>
-        </div>
+          </button>         </div>
         <div data-thq="thq-burger-menu" className="after-login-burger-menu">
           <button className="button after-login-button">
             <svg viewBox="0 0 1024 1024" className="after-login-icon">
@@ -43,7 +47,7 @@ const AfterLogin = (props) => {
             data-role="Nav"
             className="after-login-nav"
           >
-            <div className="after-login-container1">
+            <div className="after-login-container01">
               <span className="after-login-logo1">Character</span>
               <div data-thq="thq-close-menu" className="after-login-menu-close">
                 <svg viewBox="0 0 1024 1024" className="after-login-icon02">
@@ -57,12 +61,12 @@ const AfterLogin = (props) => {
               className="after-login-nav1"
             >
               <span className="after-login-text">About</span>
-              <span className="after-login-text01">Features</span>
-              <span className="after-login-text02">Pricing</span>
-              <span className="after-login-text03">Team</span>
-              <span className="after-login-text04">Blog</span>
+              <span className="after-login-text1">Features</span>
+              <span className="after-login-text2">Pricing</span>
+              <span className="after-login-text3">Team</span>
+              <span className="after-login-text4">Blog</span>
             </nav>
-            <div className="after-login-container2">
+            <div className="after-login-container02">
               <button className="after-login-login button">Login</button>
               <button className="button">Register</button>
             </div>
@@ -90,42 +94,91 @@ const AfterLogin = (props) => {
         </div>
       </header>
       <div className="after-login-banner">
-        <h1 className="after-login-text05">Start investing easily</h1>
-        <span className="after-login-text06">
+        <h1 className="after-login-text5">Effortless investing starts here!</h1>
+        <span className="after-login-text6">
           <span>
             <span
               dangerouslySetInnerHTML={{
-                __html: " ",
+                __html: ' ',
               }}
             />
           </span>
           <span>
             <span
               dangerouslySetInnerHTML={{
-                __html: " ",
+                __html: ' ',
               }}
             />
           </span>
         </span>
-        <div className="after-login-pricing-card">
-          <Link to="/balance" className="after-login-navlink button">
-            Deposit
-          </Link>
-          <div className="after-login-container3">
-            <span className="after-login-text09">Expected return:</span>
-            <span className="after-login-text10">5%</span>
-            <span className="after-login-text11">
-              with our investment strategy
-            </span>
+        <div className="after-login-blog">
+          <div className="after-login-container03">
+            <BlogPostCard2
+              rootClassName="rootClassName3"
+              heading2="IndexFriend #3"
+              text="12% APY"
+              image_alt="https://fuchsia-far-hedgehog-697.mypinata.cloud/ipfs/QmZ4RkhPkkL1gBNgHTFRahi8EMhRyGi8tZdayJUSVdm4Y4/one.png"
+              image_src="https://fuchsia-far-hedgehog-697.mypinata.cloud/ipfs/Qma6ZgH9ReXhNHL9KYmvmzVfswoLoyYsndFcqiw36HRhoH/"
+            ></BlogPostCard2>
           </div>
-          <div className="after-login-container4"></div>
+          <div className="after-login-container04">
+            <BlogPostCard2
+              image_src="https://fuchsia-far-hedgehog-697.mypinata.cloud/ipfs/QmekdqwuSjBJuGiKtbeDWKynvdyXCPSdTDkt2iB74Y2Ru6/"
+              rootClassName="rootClassName8"
+              heading1="IndexFriend #12"
+              heading2="IndexFriend #21"
+              text="18% APY"
+              apy1="150k TVL"
+            ></BlogPostCard2>
+          </div>
+          <div className="after-login-container05">
+            <BlogPostCard2
+              image_src="https://fuchsia-far-hedgehog-697.mypinata.cloud/ipfs/Qmcp2x7nnxg5qPGVx2mkpxUjrrqmG1pHi9rAYQqGWtZfdR/"
+              rootClassName="rootClassName1"
+              heading2="IndexFriend #8"
+              apy1="200k TVL"
+              text="21% APY"
+            ></BlogPostCard2>
+          </div>
+        </div>
+        <div className="after-login-blog1">
+          <div className="after-login-container06">
+            <BlogPostCard2
+              rootClassName="rootClassName5"
+              heading2="IndexFriend #25"
+              apy1="80k TVL"
+              text="19% APY"
+              image_src="https://fuchsia-far-hedgehog-697.mypinata.cloud/ipfs/QmRukLcrV7KeenaXqz6aiskpGchcnRMCcLu8oreYoNTUS1/"
+            ></BlogPostCard2>
+          </div>
+          <div className="after-login-container07">
+            <Link to="/balance" className="after-login-navlink">
+              <BlogPostCard2
+                image_src="https://fuchsia-far-hedgehog-697.mypinata.cloud/ipfs/QmZptwopXNSLCg9zxAuSmYFsuQw5k9yrgLg9NhXu73Gn9a/"
+                rootClassName="rootClassName6"
+                heading2="IndexFriend #7"
+                text="22% APY"
+                apy1="200k TVL"
+                className="after-login-component2"
+              ></BlogPostCard2>
+            </Link>
+          </div>
+          <div className="after-login-container08">
+            <BlogPostCard2
+              image_src="https://fuchsia-far-hedgehog-697.mypinata.cloud/ipfs/QmNxApxMCQG4BV2n6k7iiB7xzq6uK3VaS2K1Q9n7uPd24L/"
+              rootClassName="rootClassName7"
+              heading2="IndexFriend #9"
+              apy1="130k TVL"
+              text="23% APY"
+            ></BlogPostCard2>
+          </div>
         </div>
         <div className="after-login-testimonial">
-          <div className="after-login-container5">
-            <div className="after-login-container6">
-              <div className="after-login-container7">
+          <div className="after-login-container09">
+            <div className="after-login-container10">
+              <div className="after-login-container11">
                 <TestimonialCard2
-                  profile_src="https://images.unsplash.com/photo-1614630982169-e89202c5e045?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDIwfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNjI2NDUyMTk4&amp;ixlib=rb-1.2.1&amp;h=1200"
+                  profile_src="https://ipfs.io/ipfs/QmQLpe8NLVbJoxgEpro7uhfzQSLToNyoXXq4F3NK8cm89g"
                   rootClassName="rootClassName1"
                 ></TestimonialCard2>
               </div>
@@ -133,43 +186,8 @@ const AfterLogin = (props) => {
           </div>
         </div>
       </div>
-      <div className="after-login-container8">
-        <div className="after-login-gallery">
-          <GalleryCard1
-            rootClassName="rootClassName"
-            image_src="https://images.contentstack.io/v3/assets/blt38dd155f8beb7337/bltf9318a010cf6157a/62bbd041a7c4490fd2ef1bd9/Bored_Ape_Yacht_Club.png"
-            title="10% TVL"
-          ></GalleryCard1>
-          <GalleryCard1
-            image_src="https://lh3.googleusercontent.com/RTvkOSzBsTG0E54t8g4MyXTxETwoIy-91kYLIogGPZx05TX751dRAB7AOSrS74t5Yykay8LuCzy4Ep9UsTaOotYr5lBvpu_oEGoe"
-            rootClassName="rootClassName1"
-            title="15 % TVL"
-          ></GalleryCard1>
-          <GalleryCard1
-            image_src="https://lh3.googleusercontent.com/2Z79aJhV8IG4INHBevcZ-xAxNEe3BvaeJTzUFfrU--SkHS4d24vIbIvjfeajTiZzcY3_hDlWcc0bXBMVVDxYnQH_RtfkbrEUHlw=s1000"
-            rootClassName="rootClassName2"
-            title="18 % TVL"
-          ></GalleryCard1>
-          <GalleryCard1
-            image_src="https://airnfts.s3.amazonaws.com/nft-images/Bored_Ape_Yacht_Club_1619928448096.png"
-            rootClassName="rootClassName3"
-            title="20 % TVL"
-          ></GalleryCard1>
-          <GalleryCard1
-            image_src="https://global-uploads.webflow.com/61a98989a418f6f2acefef70/62aa03c8f2dea34dffb75da3_Bored%20Ape%20Yacht%20Club%20NFTs%20Drop%20Below%20%24100K%20for%20First%20Time%20since%20August%E2%80%8D.JPG"
-            rootClassName="rootClassName4"
-            title="21 % TVL"
-          ></GalleryCard1>
-          <GalleryCard1
-            image_src="https://nftevening.com/wp-content/uploads/2021/10/unnamed-3.png"
-            rootClassName="rootClassName5"
-            title="25 % TVL"
-          ></GalleryCard1>
-        </div>
-        <h1 className="after-login-text12">Let top players play for you</h1>
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default AfterLogin;
+export default AfterLogin

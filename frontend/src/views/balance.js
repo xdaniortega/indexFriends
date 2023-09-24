@@ -1,18 +1,23 @@
-import React from "react";
+import React from 'react'
 
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet'
 
-import "./balance.css";
+import './balance.css'
 
 const Balance = (props) => {
   return (
     <div className="balance-container">
       <Helmet>
-        <title>WealthStrategists</title>
+        <title>Balance - Character NFT template</title>
         <meta property="og:title" content="Balance - Character NFT template" />
       </Helmet>
       <header data-thq="thq-navbar" className="balance-navbar">
-        <span className="balance-logo">WealthStrategists</span>
+        <img
+          src="https://ipfs.io/ipfs/QmZJtxZVKeGUg25J5agroDSFMM2MaKgq8gCquQ1knNTkZr"
+          alt="image"
+          className="balance-image"
+        />
+        <span className="balance-logo">Index Friends</span>
         <div
           data-thq="thq-navbar-nav"
           data-role="Nav"
@@ -20,10 +25,9 @@ const Balance = (props) => {
         ></div>
         <div data-thq="thq-navbar-btn-group" className="balance-btn-group">
           <div className="balance-socials"></div>
-          <div className="balance-view button">
+         <button className="after-login-view button">
             <w3m-button />
-          </div>
-        </div>
+          </button>         </div>
         <div data-thq="thq-burger-menu" className="balance-burger-menu">
           <button className="button balance-button">
             <svg viewBox="0 0 1024 1024" className="balance-icon">
@@ -85,58 +89,56 @@ const Balance = (props) => {
       </header>
       <div className="balance-hero">
         <div className="balance-container03">
-          <h1 className="balance-text05">IndexFriends #35</h1>
+          <h1 className="balance-text05">IndexFriend #8</h1>
           <img
             alt="image"
-            src="https://nftevening.com/wp-content/uploads/2021/10/unnamed-3.png"
-            className="balance-image"
+            src="https://fuchsia-far-hedgehog-697.mypinata.cloud/ipfs/QmZptwopXNSLCg9zxAuSmYFsuQw5k9yrgLg9NhXu73Gn9a/"
+            className="balance-image1"
           />
         </div>
         <div className="balance-container04">
-          <button className="balance-button1 button">5 % BTC</button>
-          <button className="balance-button2 button">5 % BTC</button>
-          <button className="balance-button3 button">6 % ETH</button>
-          <button className="balance-button4 button">2% USDC</button>
-          <button className="balance-button5 button">3 % UNI</button>
+          <button className="balance-button1 button">5 % WBTC</button>
+          <button className="balance-button2 button">50 % CELO</button>
+          <button className="balance-button3 button">30 % WETH</button>
+          <button className="balance-button4 button">10% cUSD</button>
+          <button className="balance-button5 button">5 % UNI</button>
         </div>
       </div>
-      <div className="balance-pricing">
-        <div className="balance-container05">
-          <div className="balance-container06">
-            <h1>Your balance</h1>
-            <span className="balance-text07">
-              <span>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: " ",
-                  }}
-                />
-              </span>
-              <span>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: " ",
-                  }}
-                />
-              </span>
+      <div className="balance-container05">
+        <div className="balance-container06">
+          <h1 className="balance-text06">Your balance</h1>
+          <span className="balance-text07">
+            <span>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: ' ',
+                }}
+              />
             </span>
-          </div>
-          <div className="balance-container07">
-            <div className="balance-container08">
-              <span className="balance-text10">Initial</span>
-              <span className="balance-text11">$10000</span>
-            </div>
-            <div className="balance-container09">
-              <span className="balance-text12">Now</span>
-              <span className="balance-text13">$12000</span>
-            </div>
-          </div>
-          <h1 className="balance-text14">20% performance</h1>
-          <button className="balance-button6 button">Withdraw early</button>
+            <span>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: ' ',
+                }}
+              />
+            </span>
+          </span>
         </div>
+        <div className="balance-container07">
+          <div className="balance-container08">
+            <span className="balance-text10">Initial</span>
+            <span className="balance-text11">$10000</span>
+          </div>
+          <div className="balance-container09">
+            <span className="balance-text12">Now</span>
+            <span className="balance-text13">$12000</span>
+          </div>
+        </div>
+        <h1 className="balance-text14">20% performance</h1>
+        <button className="balance-button6 button">Withdraw early</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Balance;
+export default Balance
