@@ -12,7 +12,7 @@ contract Vault is Ownable {
   mapping(address => uint) public stakingBalance;
 
   constructor() {
-    token = address(0xFEca406dA9727A25E71e732F9961F680059eF1F9); //USDC token adress in polygon MUMBAI TESTNET
+    token = address(0xFEca406dA9727A25E71e732F9961F680059eF1F9); //USDC token adress in CELO testnet
   }
 
   function depositFunds(uint amount_) public payable {

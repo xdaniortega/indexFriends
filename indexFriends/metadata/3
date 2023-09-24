@@ -1,0 +1,31 @@
+{
+  "description": "By StrategicWealth",
+  "image": "https://ipfs.io/ipfs/QmTty7Y9D11KYADAWqQjGF894vEx6s9H1Jf4NVzDb2kW3B/four.png",
+  "name": "INDEX FRIEND #4",
+  "attributes": [
+    {
+      "trait_type": "HAIR",
+      "value": "Long and Brown"
+    },
+    {
+      "trait_type": "SHIRT",
+      "value": "Basic White"
+    },
+    {
+      "trait_type": "TROUSERS",
+      "value": "Light Brown"
+    },
+    {
+      "trait_type": "BAG",
+      "value": "Towel"
+    },
+    {
+      "trait_type": "SHOES",
+      "value": "Special Brown"
+    },
+    {
+      "trait_type": "BACKGROUND",
+      "value": "Light Purple"
+    }
+  ]
+}

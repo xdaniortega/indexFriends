@@ -1,0 +1,31 @@
+{
+  "description": "By StrategicWealth",
+  "image": "https://ipfs.io/ipfs/QmTty7Y9D11KYADAWqQjGF894vEx6s9H1Jf4NVzDb2kW3B/six.png",
+  "name": "INDEX FRIEND #6",
+  "attributes": [
+    {
+      "trait_type": "HAIR",
+      "value": "H1 Black"
+    },
+    {
+      "trait_type": "SHIRT",
+      "value": "Warrior Blue"
+    },
+    {
+      "trait_type": "EARS",
+      "value": "Sharp"
+    },
+    {
+      "trait_type": "TROUSERS",
+      "value": "T1 Black"
+    },
+    {
+      "trait_type": "SHOES",
+      "value": "S1 Black"
+    },
+    {
+      "trait_type": "BACKGROUND",
+      "value": "Blue"
+    }
+  ]
+}
