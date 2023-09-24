@@ -9,7 +9,7 @@ const FeatureCard2 = (props) => {
     <div className={`feature-card2-feature-card ${props.rootClassName} `}>
       <h2 className="feature-card2-text">{props.title}</h2>
       <img
-        src="https://changenow.io/images/cached/weth.png"
+        src="https://cryptologos.cc/logos/ethereum-eth-logo.png"
         className="feature-card2-image"
       />
     </div>

@@ -12,43 +12,46 @@ contract Vault is Ownable {
   mapping(address => uint) public stakingBalance;
 
   constructor() {
-    token = address(0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6); //WETH IN CELO
+    token = address(0xFEca406dA9727A25E71e732F9961F680059eF1F9); //USDC token adress in CELO testnet
   }
 
-  function depositFunds(uint amount_, address strategy_) public payable {
-    uint256 allowance = IERC20(token).allowance(msg.sender, address(this));
-    require(allowance >= amount_, "Not approved to send balance requested");
-
+  function depositFunds(uint amount_) public payable {
+    require(
+      IERC20(token).allowance(msg.sender, address(this)),
+      "Not approved to send balance requested"
+    );
     bool success = IERC20(token).transferFrom(
       msg.sender,
       address(this),
-      amount_
+      _amount
     );
     require(success, "Transaction was not successful");
 
     //APPROVE THE VAULT TO SEND FUNDS TO THE STRATEGY
-    IERC20(token).approve(strategy_, amount_);
+    IERC20(token).approve(strategy, amount_);
   }
 
   function withdrawFunds(uint amount_) public payable {
-    uint256 allowance = IERC20(token).allowance(msg.sender, address(this));
-    require(allowance >= amount_, "Not approved to send balance requested");
+    require(
+      IERC20(token).allowance(address(this), msg.sender),
+      "Not approved to send balance requested"
+    );
     bool success = IERC20(token).transferFrom(
       address(this),
       msg.sender,
-      amount_
+      _amount
     );
     require(success, "Transaction was not successful");
   }
 
-  /*function subscribeToStrategy(address strategy) {
+  function subscribeToStrategy(address strategy) {
     bool success = IERC20(token).transferFrom(
       address(this),
       strategy,
       stakingBalance[msg.sender]
     ); //Transfer funds from vault to strategy
     //require(success, "Transaction was not successful");
-  }*/
+  }
 
   /*function depositAndSubscribe(uint amount_) public {
     bool successfulDeposit = deposit(amount_);

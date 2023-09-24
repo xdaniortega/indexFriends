@@ -12,7 +12,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "viem": "^1.12.1",
-    "wagmi": "^1.4.2"
+    "wagmi": "^1.4.2",
+    "web3": "^4.1.2"
   },
   "scripts": {
     "start": "craco start",

@@ -12,6 +12,7 @@
   transform: scale(1.02);
 }
 .feature-card7-text {
+  font-family: Roboto;
   margin-bottom: var(--dl-space-space-twounits);
 }
 .feature-card7-image {

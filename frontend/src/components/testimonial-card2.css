@@ -17,9 +17,10 @@
 }
 .testimonial-card2-text {
   color: #000000;
-  font-size: 4rem;
+  font-size: 3rem;
   align-self: center;
   text-align: left;
+  font-family: Poppins;
   margin-bottom: var(--dl-space-space-twounits);
 }
 .testimonial-card2-image {
@@ -30,6 +31,10 @@
   border-radius: var(--dl-radius-radius-round);
 }
 .testimonial-card2-root-class-name1 {
+  align-self: flex-start;
+  background-color: #edf2fb;
+}
+.testimonial-card2-root-class-name {
   align-self: flex-start;
   background-color: #edf2fb;
 }
@@ -58,6 +63,6 @@
     margin-bottom: var(--dl-space-space-unit);
   }
   .testimonial-card2-text {
-    text-align: left;
+    text-align: center;
   }
 }

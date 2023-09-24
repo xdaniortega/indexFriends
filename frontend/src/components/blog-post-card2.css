@@ -1,0 +1,104 @@
+.blog-post-card2-blog-post-card {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  max-width: var(--dl-size-size-maxwidth);
+  box-shadow: 5px 5px 10px 0px rgba(18, 18, 18, 0.1);
+  transition: 0.3s;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.blog-post-card2-blog-post-card:hover {
+  transform: scale(1.02);
+}
+.blog-post-card2-text {
+  font-family: Poppins;
+  padding-bottom: var(--dl-space-space-halfunit);
+}
+.blog-post-card2-image {
+  width: var(--dl-size-size-xlarge);
+  height: 100%;
+  object-fit: cover;
+}
+.blog-post-card2-container {
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.blog-post-card2-container1 {
+  width: 222px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-gray-900);
+  border-width: 1px;
+  flex-direction: row;
+  justify-content: space-between;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+}
+.blog-post-card2-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.blog-post-card2-button {
+  font-family: Poppins;
+  background-color: #fff1e6;
+}
+.blog-post-card2-container2 {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: space-between;
+  flex-direction: column;
+}
+.blog-post-card2-text1 {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 300;
+  padding-left: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-halfunit);
+}
+.blog-post-card2-text2 {
+  color: #000000;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 300;
+  padding-left: var(--dl-space-space-unit);
+}
+.blog-post-card2-container3 {
+  flex: 0 0 auto;
+  width: auto;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: auto;
+  display: flex;
+  align-items: space-between;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 991px) {
+  .blog-post-card2-image {
+    height: 350px;
+  }
+}

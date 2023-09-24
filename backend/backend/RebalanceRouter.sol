@@ -4,77 +4,52 @@ pragma solidity ^0.8.8;
 //import {IRebalanceRouter} from "./interfaces/IRebalanceRouter.sol";
 import "@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol";
 import "@uniswap/v3-periphery/contracts/libraries/TransferHelper.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 /// @title RebalanceRouter
 
 //this contract should be the one that will comunicate with 1inch contracts,
-contract RebalanceRouter is IRebalanceRouter {
+contract RebalanceRouter {
   ISwapRouter public router;
-
-  struct ExactInputSingleParams {
-    address tokenIn;
-    address tokenOut;
-    uint24 fee;
-    address recipient;
-    uint256 deadline;
-    uint256 amountIn;
-    uint256 amountOutMinimum;
-    uint160 sqrtPriceLimitX96;
-  }
-
-  struct ExactOutputSingleParams {
-    address tokenIn;
-    address tokenOut;
-    uint24 fee;
-    address recipient;
-    uint256 deadline;
-    uint256 amountOut;
-    uint256 amountInMaximum;
-    uint160 sqrtPriceLimitX96;
-  }
 
   constructor() {
     /* See interface at https://www.npmjs.com/package/@uniswap/v3-periphery?activeTab=code */
     //router = ISwapRouter(0xE592427A0AEce92De3Edee1F18E0157C05861564); //UNISWAP ON CELO NETWORK
-    router = ISwapRouter(0xE592427A0AEce92De3Edee1F18E0157C05861564); //UNISWAP ON CELO NETWORK
+    router = ISwapRouter(0x5615CDAb10dc425a742d643d949a7F474C01abc4); //UNISWAP ON CELO NETWORK
   }
 
-  function rebalancePositions() public {
-    //call swap tokens
-  }
-
-  function _swapTokens(
+  function swapTokens(
     address tokenIn_,
     address tokenOut_,
     uint256 amountIn_
-  ) internal returns (uint256 amountOut) {
+  ) public returns (uint256 amountOut) {
     require(amountIn_ > 0);
 
     //check whether _tokenIn has been allowed by the user for the amount given
-    uint256 allowance = IERC20(_tokenIn).allowance(msg.sender, address(this));
+    uint256 allowance = IERC20(tokenIn_).allowance(msg.sender, address(this));
     require(
-      allowance >= amountIn,
+      allowance >= amountIn_,
       "RebalanceRouter: Amount is greater than allowance"
     );
 
     // Transfer amountIn of _tokenIn to this contract.
     TransferHelper.safeTransferFrom(
-      _tokenIn,
+      tokenIn_,
       msg.sender,
       address(this),
-      amountIn
+      amountIn_
     );
 
     // Approve uniswapRouter to spend _tokenIn.
-    TransferHelper.safeApprove(_tokenIn, address(uniswapRouter), amountIn);
+    TransferHelper.safeApprove(tokenIn_, address(router), amountIn_);
 
     ISwapRouter.ExactInputSingleParams memory params = _buildInputParams(
-      _tokenIn,
-      _tokenOut,
-      amountIn
+      tokenIn_,
+      tokenOut_,
+      amountIn_
     );
 
-    amountOut = uniswapRouter.exactInputSingle(params);
+    amountOut = router.exactInputSingle(params);
     return amountOut;
   }
 
@@ -82,7 +57,7 @@ contract RebalanceRouter is IRebalanceRouter {
     address tokenIn_,
     address tokenOut_,
     uint256 amountIn_
-  ) internal returns (ExactInputSingleParams e) {
+  ) internal view returns (ISwapRouter.ExactInputSingleParams memory e) {
     uint24 fee = 5000;
     address recipient = msg.sender;
     uint256 deadline = block.timestamp + 10;
@@ -90,7 +65,7 @@ contract RebalanceRouter is IRebalanceRouter {
     uint160 sqrtPriceLimitX96 = 0;
 
     return
-      ExactInputSingleParams(
+      ISwapRouter.ExactInputSingleParams(
         tokenIn_,
         tokenOut_,
         fee,
