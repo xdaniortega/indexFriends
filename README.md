@@ -1,4 +1,6 @@
 # strategicWealth
+Project build for EthGlobal NY Hackathon.
+
 
 First
 ´npm i ´
